@@ -1,0 +1,210 @@
+.endChat {
+  padding-bottom: 100px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.user {
+  background-color: #3a3a3a; /* Blue background color */
+  color: white; /* White text color */
+  padding: 10px;
+  border-radius: 25px; /* Rounded corners */
+  margin: 5px 0;
+  max-width: 80%;
+  align-self: flex-end; /* Align to the right */
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+/* Optional: Add some style for assistant's messages for better contrast */
+.assistant {
+  /* background-color: #f1f1f1; */
+  color: whitesmoke;
+  padding: 18px;
+  /* border-radius: 15px; */
+  margin: 10px 0;
+  max-width: 100%;
+  align-self: flex-start; /* Align to the left */
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+/* Ensures proper positioning */
+.move {
+  padding-right: 300px;
+}
+
+.newForm {
+  position: fixed;
+  bottom: 24px;
+  background-color: rgb(31, 31, 33);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px 29px;
+  width: 600px;
+  height: 60px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1a1d1d;
+}
+.newForm .text {
+  background-color: #1a1d1d;
+}
+.newForm:hover {
+  transition: all;
+  transition-duration: 0.3s;
+  border-color: #454745; /* Change the border color */
+  box-shadow: 0 0 10px #fffefe, 0 0 8px #09ff00;
+}
+.newForm:hover button {
+  background: linear-gradient(
+    100deg,
+    #b2fdbe9c,
+    #11111111,
+    #5555,
+    #33333333,
+    #5555
+  );
+}
+.newForm .message {
+  gap: 90px;
+}
+.newForm .message .chatimage {
+  height: 10px;
+}
+.newForm textarea {
+  flex: 1;
+  padding: 25px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  /* background-color: transparent; */
+  /* color: rgb(230, 227, 227); */
+}
+.newForm button,
+.newForm label {
+  border-radius: 60%;
+  border: none;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 0.4s;
+  background-color: rgb(62, 64, 64);
+}
+.newForm button:hover,
+.newForm label:hover {
+  transition: ease-in-out;
+  transition-duration: 0.3s;
+  background-color: rgb(58, 58, 58);
+  rotate: calc(-45deg);
+}
+.newForm button img,
+.newForm label img {
+  width: 16px;
+  height: 16px;
+}
+
+.myImg {
+  max-width: none; /* Removes any max-width constraint */
+  width: auto; /* Keeps aspect ratio intact */
+  height: auto; /* Maintains aspect ratio */
+  margin: 0px auto;
+  display: block; /* Prevent inline display issues */
+  transform: scale(6); /* Keep the scale as you wanted */
+  transform-origin: top center; /* Keeps scaling origin centered on top */
+  position: relative; /* Allows for better positioning */
+  margin-bottom: 250px;
+  overflow: visible; /* Add space below the image */
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .newForm {
+    width: 70%; /* Adjust width for medium screens */
+    padding: 0px 30px; /* Slightly reduce padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .newForm {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 0px 20px; /* Further reduce padding */
+  }
+
+  .newForm input {
+    padding: 20px; /* Reduce padding for input fields */
+    font-size: 14px; /* Adjust font size for better readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .newForm {
+    width: 100%; /* Full width for very small screens */
+    gap: 10px; /* Reduce gap to optimize space */
+    padding: 0px 15px;
+    bottom: 15px; /* Adjust the position for smaller screens */
+  }
+
+  .newForm input {
+    padding: 15px; /* Further reduce padding */
+    font-size: 13px; /* Smaller font size for compact view */
+  }
+
+  .newForm button,
+  .newForm label {
+    padding: 10px; /* Reduce button size */
+  }
+}
+
+/* ------------------------------------------------- */
+/* New Additions for Code Blocks and Copy Button   */
+/* ------------------------------------------------- */
+
+/* Style the copy button within code blocks */
+.copy-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(
+    90deg,
+    #7b7b7b,
+    #141414,
+    #343534,
+    #1c1c1c,
+    #2d2c2c
+  );
+  border: none;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.code-block-container::-webkit-scrollbar {
+  height: 6px;
+  background: green;
+
+  /* Make scrollbar smaller */
+}
+
+.code-block-container::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 20px;
+}
+/* Show the copy button when hovering over the code block container */
+.code-block-container:hover .copy-button {
+  opacity: 1;
+}

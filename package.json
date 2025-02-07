@@ -1,0 +1,46 @@
+{
+  "name": "CrackGPT",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.21.0",
+    "@codesandbox/sandpack-react": "^2.19.10",
+    "@google/generative-ai": "^0.21.0",
+    "@tabler/icons-react": "^3.26.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.16.0",
+    "imagekitio-react": "^4.2.0",
+    "katex": "^0.16.19",
+    "node-fetch": "^3.3.2",
+    "react": "19.0.0-rc-8b08e99e-20240713",
+    "react-dom": "19.0.0-rc-8b08e99e-20240713",
+    "react-latex": "^1.2.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^7.1.1",
+    "react-sandbox-editor": "^2.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "react-type-animation": "^3.2.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "swiper": "^11.1.15",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "vite": "^5.3.4"
+  }
+}

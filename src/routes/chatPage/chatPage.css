@@ -1,0 +1,66 @@
+.chatpage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .wrapper {
+    flex: 1;
+    /* overflow-y: scroll; Corrected the scroll-y to overflow-y */
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .chat {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p,
+      li {
+        margin: 10px 0px;
+      }
+
+      .message {
+        padding: 20px;
+        white-space: pre-wrap;
+        align-self: flex-start;
+        /* right: 200px; */
+
+        &.user {
+          background-color: #49484e;
+          border-radius: 20px;
+          max-width: 75%;
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .chatpage .wrapper .chat {
+    width: 70%; /* Adjust the width for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .chatpage .wrapper .chat {
+    width: 90%; /* Further adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .chatpage .wrapper .chat {
+    width: 100%; /* Full width for very small screens */
+    gap: 10px; /* Reduce gap to optimize space */
+  }
+
+  .chatpage .wrapper .chat .message {
+    padding: 15px; /* Reduce padding on smaller screens */
+    font-size: 14px; /* Adjust text size for smaller devices */
+  }
+}

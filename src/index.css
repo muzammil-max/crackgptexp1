@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070808;
+  color: #dedede;
+  font-family: "roboto";
+  font-size: 20px; /* Default font size for larger screens */
+  font-smooth: calc(100);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media Query for Tablets and smaller desktops */
+@media (max-width: 992px) {
+  body {
+    font-size: 18px; /* Slightly smaller font size for medium screens */
+  }
+}
+
+/* Media Query for Mobile devices */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Smaller font size for mobile screens */
+  }
+}
+
+/* You can add more adjustments as needed for specific elements or layouts */
+/* Example: Adjusting padding or margins for smaller screens */
+/*
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+}
+*/

@@ -1,0 +1,228 @@
+.homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap; /* Ensure wrapping for smaller screens */
+  box-sizing: border-box; /* Prevent overflow from padding */
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1;
+  animation: fadeIn 5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.typing {
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+  padding: 16px;
+  flex: 1;
+}
+
+.left h1 {
+  font-size: clamp(36px, 8vw, 128px);
+  background: linear-gradient(90deg, #90ee90, #fff, #90ee90);
+  background-size: 200% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: gradientAnimation 3s linear infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.left h2 {
+  color: #fff;
+  font-size: clamp(14px, 3vw, 24px);
+}
+
+.left h3 {
+  color: #aaa;
+  font-size: clamp(12px, 2.5vw, 18px);
+}
+
+.left .button {
+  padding: 12px 30px;
+  font-size: clamp(14px, 3.5vw, 20px);
+  font-weight: bold;
+
+  /* jsx is the react file extension */
+
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    #2e7d32,
+    #43a047,
+    #66bb6a,
+    #67dd6d,
+    #388e3c
+  );
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  background-size: 200% 100%;
+}
+
+.left .button:hover {
+  background-position: 100% 0;
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.chat {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px;
+}
+
+.chat img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+}
+
+.terms {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.terms img {
+  height: 32px;
+  width: 32px;
+}
+
+.terms .links {
+  display: flex;
+  gap: 15px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .homepage {
+    padding: 8px;
+  }
+
+  .left h1 {
+    font-size: clamp(36px, 7vw, 96px);
+  }
+
+  .chat {
+    padding: 12px;
+  }
+
+  .terms {
+    bottom: 60px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 16px; /* Ensure enough space around elements */
+  }
+
+  .left {
+    gap: 12px;
+    padding: 8px;
+  }
+
+  .left h1 {
+    font-size: clamp(28px, 6vw, 72px);
+  }
+
+  .left h2 {
+    font-size: clamp(12px, 3vw, 20px);
+  }
+
+  .left button {
+    font-size: clamp(12px, 3vw, 18px);
+    padding: 10px 24px;
+  }
+
+  .terms {
+    bottom: 50px;
+    font-size: 10px;
+  }
+
+  .terms .links {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left h1 {
+    font-size: clamp(24px, 6vw, 64px);
+  }
+
+  .left button {
+    padding: 8px 20px;
+    font-size: clamp(10px, 3vw, 16px);
+  }
+
+  .terms {
+    bottom: 40px;
+  }
+
+  .terms img {
+    height: 28px;
+    width: 28px;
+  }
+
+  .terms .links {
+    font-size: 10px;
+  }
+}
