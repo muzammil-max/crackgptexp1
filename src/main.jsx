@@ -5,12 +5,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // import Homepage from "./routes/homepage/Homepage.jsx";
 import { Homepage } from "./routes/Homepage/Homepage.jsx";
 
-import DashboardPage from "./routes/dashboardPage/dashboardPage.jsx";
+// import DashboardPage from "./routes/dashboardPage/dashboardPage.jsx";
 import RootLayout from "./layouts/rootLayout/RootLayout.jsx";
 import DashBoardLayout from "./layouts/dashBoardLayout/DashBoardLayout.jsx";
-import SigninPage from "./routes/signinPage/SigninPage.jsx";
-import SignupPage from "./routes/signupPage/SignupPage.jsx";
-import ChatPage from "./routes/chatPage/Chatpage.jsx";
+import SigninPage from "./routes/SigninPage/SigninPage.jsx";
+import SignupPage from "./routes/SignupPage/SignupPage.jsx";
+import ChatPage from "./routes/ChatPage/Chatpage.jsx";
 
 const router = createBrowserRouter([
   {

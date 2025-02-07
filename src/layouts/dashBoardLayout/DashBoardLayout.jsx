@@ -3,7 +3,7 @@ import "./dashBoardLayout.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useAuth } from "@clerk/clerk-react";
 import ChatList from "../../components/chatList/ChatList";
-import Chatpage from "../../routes/chatPage/Chatpage";
+import Chatpage from "../../routes/ChatPage/Chatpage";
 import NewPrompt from "../../components/newPrompt/NewPrompt";
 const DashBoardLayout = () => {
   const { userId, isLoaded } = useAuth();
